@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.ani {
+  position: relative;
+  background-color: rgb(15, 15, 70);
+  height: 100vh;
+  overflow: hidden;
+}
+.ani h2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+.ani ul li {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.37);
+  z-index: 2;
+}
+#circle li {
+  left: 10%;
+  top: 10%;
+  animation: naidu 6s infinite;
+}
+#circle li:nth-child(2) {
+  left: 80%;
+  top: 10%;
+  animation-delay: 2s;
+}
+#circle li:nth-child(3) {
+  left: 50%;
+  top: 60%;
+  animation-delay: 3s;
+}
+#circle li:nth-child(4) {
+  left: 80%;
+  top: 90%;
+  animation-name: 4s;
+}
+#circle li:nth-child(5) {
+  left: 10%;
+  top: 90%;
+  animation-delay: 4s;
+}
+
+@keyframes naidu {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3) rotate(1000deg);
+    opacity: 0;
+  }
+}
